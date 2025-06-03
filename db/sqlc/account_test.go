@@ -84,7 +84,7 @@ func TestListAccounts(t *testing.T) {
 	var offset int32 = 5
 
 	for range 10 {
-		createRandomAccount(t)
+		go createRandomAccount(t)
 	}
 
 	arg := ListAccountsParams{
