@@ -10,6 +10,8 @@ import (
 	_ "github.com/lib/pq"
 )
 
+// git test
+
 func main() {
 
 	config, err := util.LoadConfig(".")
