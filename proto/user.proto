@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+// group the proto codes
+package pb;
+
+import "google/protobuf/Timestamp.proto";
+
+// go package 
+option go_package = "github.com/JigmeTenzinChogyel/bank-bhutan/pb";
+
+// similer to req and res structs
+message User {
+    string username = 1; // field no are important to uniquely identify the field for serialization
+    string full_name = 2;
+    string email = 3;
+    google.protobuf.Timestamp password_changed_at = 4;
+    google.protobuf.Timestamp created_at = 5;
+}
+
