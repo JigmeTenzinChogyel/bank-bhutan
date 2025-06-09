@@ -1,3 +1,5 @@
+DB_URL=postgresql://root:secret@localhost:5432/bank_bhutan?sslmode=disable
+
 postgres:
 	docker run --name postgres17 --network bank-netwrok -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secret -d postgres:17-alpine
 
@@ -8,18 +10,17 @@ dropdb:
 	docker exec -it postgres17 dropdb --username=root --owner=root bank_bhutan
 
 migrateup:
-	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/bank_bhutan?sslmode=disable" -verbose up
+	migrate -path db/migration -database "$(DB_URL)" -verbose up
 
 migrateup1:
-	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/bank_bhutan?sslmode=disable" -verbose up 1
-
+	migrate -path db/migration -database "$(DB_URL)" -verbose up 1
 
 migratedown:
-	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/bank_bhutan?sslmode=disable" -verbose down
+	migrate -path db/migration -database "$(DB_URL)" -verbose down
 
 
 migratedown1:
-	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/bank_bhutan?sslmode=disable" -verbose down 1
+	migrate -path db/migration -database "$(DB_URL)" -verbose down 1
 
 generate:
 	sqlc generate
