@@ -14,6 +14,7 @@ type Config struct {
 	GRPCServerAddress   string        `mapstructure:"GRPC_SERVER_ADDRESS"`
 	TokenSymmetricKey   string        `mapstructure:"TOKEN_SYMMETRIC_KEY"`
 	AccessTokenDuration time.Duration `mapstructure:"ACCESS_TOKEN_DURATION"`
+	MigrationURL        string        `mapstructure:"MIGRATION_URL"`
 }
 
 // load configuration from env
