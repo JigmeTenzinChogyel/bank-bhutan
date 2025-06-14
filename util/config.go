@@ -8,6 +8,7 @@ import (
 
 // these values are read by viper from env file
 type Config struct {
+	Enviroment          string        `mapstructure:"ENVIROMENT"`
 	DBDriver            string        `mapstructure:"DB_DRIVER"`
 	DBSource            string        `mapstructure:"DB_SOURCE"`
 	HTTPServerAddress   string        `mapstructure:"HTTP_SERVER_ADDRESS"`
