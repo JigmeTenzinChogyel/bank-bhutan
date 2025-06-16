@@ -106,7 +106,7 @@ var File_user_proto protoreflect.FileDescriptor
 const file_user_proto_rawDesc = "" +
 	"\n" +
 	"\n" +
-	"user.proto\x12\x02pb\x1a\x1fgoogle/protobuf/Timestamp.proto\"\xdc\x01\n" +
+	"user.proto\x12\x02pb\x1a\x1fgoogle/protobuf/timestamp.proto\"\xdc\x01\n" +
 	"\x04User\x12\x1a\n" +
 	"\busername\x18\x01 \x01(\tR\busername\x12\x1b\n" +
 	"\tfull_name\x18\x02 \x01(\tR\bfullName\x12\x14\n" +

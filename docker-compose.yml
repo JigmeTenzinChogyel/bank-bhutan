@@ -15,7 +15,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
-      - "9090:9000"
+      - "9000:9000"
     environment:
       - DB_SOURCE=postgresql://root:secret@postgres:5432/bank_bhutan?sslmode=disable
     depends_on:
